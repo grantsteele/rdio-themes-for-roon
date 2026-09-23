@@ -1,0 +1,139 @@
+// ===================================================
+// Theme Colors
+// ===================================================
+
+atom-background                   #FFFFFF
+atom-background-fade              #FFFFFF
+atom-black-fade                   #FFFFFF
+atom-separator-light              #E6E6E6
+atom-separator-heavy              #CFCFCF
+atom-classical-background         #F4F5F6
+
+atom-grey4                        #2C2E2F
+atom-grey4-hover                  #000000
+atom-grey4-insensitive            #25%2C2E2F
+atom-grey4-marked                 #60%2C2E2F
+atom-grey4-secondary              #7A7C7D
+
+atom-grey3                        #2C2E2F
+atom-grey3-hover                  #60%2C2E2F
+atom-grey3-insensitive            #25%2C2E2F
+atom-grey3-marked                 #6E7072
+
+atom-grey2                        #EAECED
+atom-grey2-hover                  #DFE1E3
+atom-grey2-pressed                #D5D8DA
+atom-grey2-insensitive            #50%EAECED
+
+atom-grey1                        #F4F5F6
+atom-grey1-hover                  #EAECED
+atom-grey1-insensitive            #ACAEB0
+atom-grey1-marked                 #85%F4F5F6
+
+atom-grey                         #E3E5E7
+atom-grey-mapping                 #8E9091
+
+atom-genre-mapping                #7F93A8
+
+atom-blue                         #0990D5
+atom-blue-hover                   #0A7FBB
+atom-blue-pressed                 #0870A6
+atom-blue-insensitive             #40%0990D5
+atom-blue-background-blur         #B9E0F5
+
+atom-blue-mapping                 #1F7FB5
+atom-onebox-blue                  #1F7FB5
+
+atom-daily-picks-header           #0877B3
+atom-daily-picks-frame            #1AA0E6
+atom-daily-picks-gradient         #0B89CC
+
+atom-orange                       #E2703A
+atom-orange-hover                 #CC5E2A
+atom-orange-insensitive           #F6C6AE
+atom-orange-mapping               #E2703A
+
+atom-green                        #3FB39A
+atom-green-hover                  #33A089
+atom-green-insensitive            #BFE7DE
+
+atom-red                          #E52A2B
+atom-red-hover                    #CC2224
+atom-red-insensitive              #F4B3B4
+atom-red-background-blur          #F7C3C4
+
+atom-selectable-blue              #E1F1FA
+atom-selectable-blue-hover        #D2EAF7
+atom-selectable-blue-checked      #E3E5E7
+
+atom-selectable                   #F2F3F4
+atom-selectable-hover             #EAECED
+atom-selectable-checked           #E3E5E7
+atom-selectable-insensitive       #F7F8F8
+
+atom-bluebg-noalpha               #FFFFFF
+atom-bluebg-noalpha-classical     #FFFFFF
+atom-bluebg                       #FFFFFF
+atom-bluebg-hover                 #F2F3F4
+atom-bluebg-pressed               #EAECED
+atom-bluebg-insensitive           #FFFFFF
+
+atom-footer                       #EAECED
+atom-footer-opaque                #00%EAECED
+atom-classical-footer             #E3E5E7
+atom-zebra-stripe                 #F7F8F9
+atom-panel                        #FFFFFF
+atom-classical-panel              #F4F5F6
+atom-popup                        #FFFFFF
+atom-tooltip-bg                   #F4F5F6
+atom-border                       #D8DADC
+
+atom-graph-1                      #0990D5
+atom-graph-2                      #4DB3E6
+atom-graph-3                      #BFE3F6
+atom-graph-4                      #7FC8EE
+atom-graph-5                      #2A6F96
+atom-graph-6                      #BFC1C3
+
+atom-purple-mapping               #5E8FC4
+
+// ===================================================
+// not theme colors. these should not change 
+// ===================================================
+atom-white                        #ffffff
+atom-white-hover                  #ffffff
+atom-white-insensitive            #05%ffffff
+atom-white-marked                 #72%ffffff
+atom-white-button-hover           #22%ffffff
+atom-white-button                 #12%ffffff
+atom-black                        #000000
+atom-black-hover                  #2D2C2C
+atom-black-insensitive            #ACACAC
+atom-black-marked                 #85%2C2C2E
+button-sensitivity-text-color     #40%FFFFFF
+atom-waveform                     #75808F
+atom-fade                         #1E1E1E
+atom-highlight                    #FF8000
+atom-yellow                       #E6BB72
+
+// ===================================================
+// used by dynamiclist scrollbar in 3/2020, before changes in master. Question for brian2: are these colors correct for the new dynamiclist?
+// ===================================================
+
+atom-purple                       #0990D5
+atom-purple-hover                 #34A6E0
+atom-purple-pressed               #0A7FBB
+
+// ===================================================
+// brand colors
+// ===================================================
+dropbox-color                       #ffffff
+facebook-color                      #3B5998
+twitter-color                       #1DA1F2
+
+// ===================================================
+// BACKGROUND & DIM LAYERS
+// ===================================================
+feedbackpanel                       #70%000000
+dimlayer                            #70%000000
+album-dimlayer                      #70%FFFFFF
