@@ -1,28 +1,40 @@
 #!/bin/bash
-# Rdio day/night switcher for Roon.
+# Rdio day/night switcher for Roon (macOS).
 # Keep Roon's theme set to "Rdio". Rdio's colors file is a link to
 # ~/Library/Application Support/RdioThemeSwitch/active/colors. At sunset this copies
 # your night colours into that file; at sunrise, your day colours. It never writes
 # inside the Roon app, so macOS App Management permission is not needed.
-
-# ---- Settings you can change ------------------------------------------------
-LAT=-27.47            # Brisbane
-LON=153.03
-SUNRISE_OFFSET_MIN=0  # e.g. 30 = switch to day 30 min AFTER sunrise
-SUNSET_OFFSET_MIN=0   # e.g. -30 = switch to night 30 min BEFORE sunset
-RESTART_ROON=1        # 0 = never restart; the change applies next time Roon opens
-# -----------------------------------------------------------------------------
+#
+# Settings live in ~/Library/Application Support/RdioThemeSwitch/settings.txt
+# (copied there by Install.command). Edit settings.txt and re-run the installer to change them.
 
 BASE="$HOME/Library/Application Support/RdioThemeSwitch"
-LINK="/Applications/Roon.app/Contents/Resources/Themes/Rdio/colors"
+SETTINGS="$BASE/settings.txt"
 TARGET="$BASE/active/colors"
 LOG="$HOME/Library/Logs/rdio-theme-switch.log"
 log() { echo "$(date '+%Y-%m-%d %H:%M:%S') $*" >> "$LOG"; }
 FORCE="$1"   # optional: day | night
 
+# Reads KEY=value from settings.txt (ignores comments, spaces and Windows line endings)
+setting() { tr -d '\r' < "$SETTINGS" | sed -n "s/^[[:space:]]*$1[[:space:]]*=[[:space:]]*//p" | tail -1 | sed 's/[[:space:]]*$//'; }
+is_num() { [[ "$1" =~ ^-?[0-9]+(\.[0-9]+)?$ ]]; }
+is_int() { [[ "$1" =~ ^-?[0-9]+$ ]]; }
+
+[ -f "$SETTINGS" ] || { log "ERROR: $SETTINGS missing. Re-run Install.command."; exit 1; }
+LAT=$(setting LATITUDE); LON=$(setting LONGITUDE)
+SUNRISE_OFFSET_MIN=$(setting SUNRISE_OFFSET_MIN); is_int "$SUNRISE_OFFSET_MIN" || SUNRISE_OFFSET_MIN=0
+SUNSET_OFFSET_MIN=$(setting SUNSET_OFFSET_MIN);   is_int "$SUNSET_OFFSET_MIN"  || SUNSET_OFFSET_MIN=0
+RESTART_ROON=$(setting RESTART_ROON)
+if ! is_num "$LAT" || ! is_num "$LON"; then log "ERROR: LATITUDE/LONGITUDE in $SETTINGS aren't numbers. Fix them and re-run Install.command."; exit 1; fi
+
+THEMES=$(cat "$BASE/themes-folder" 2>/dev/null)
+LINK="$THEMES/Rdio/colors"
+
+# Sunrise/sunset as Unix times. Near the poles: midnight sun = day all day, polar night = night all day.
 read RISE SET < <(osascript -l JavaScript -e "
 function sunTimes(lat, lon, now) {
   var rad = Math.PI / 180;
+  var nowS = Math.round(now.getTime() / 1000);
   var jdNow = now.getTime() / 86400000 + 2440587.5;
   var n = Math.round(jdNow - 2451545.0 + 0.0008 + lon / 360);
   var Js = n - lon / 360;
@@ -31,7 +43,10 @@ function sunTimes(lat, lon, now) {
   var L = (M + C + 180 + 102.9372) % 360;
   var Jt = 2451545.0 + Js + 0.0053 * Math.sin(M * rad) - 0.0069 * Math.sin(2 * L * rad);
   var sd = Math.sin(L * rad) * Math.sin(23.4397 * rad), cd = Math.cos(Math.asin(sd));
-  var w = Math.acos((Math.sin(-0.833 * rad) - Math.sin(lat * rad) * sd) / (Math.cos(lat * rad) * cd)) / rad;
+  var cosw = (Math.sin(-0.833 * rad) - Math.sin(lat * rad) * sd) / (Math.cos(lat * rad) * cd);
+  if (cosw >= 1) return '0 0';
+  if (cosw <= -1) return (nowS - 86400) + ' ' + (nowS + 86400);
+  var w = Math.acos(cosw) / rad;
   var toS = function (j) { return Math.round((j - 2440587.5) * 86400); };
   return toS(Jt - w / 360) + ' ' + toS(Jt + w / 360);
 }
@@ -61,7 +76,7 @@ fi
 cp "$BASE/$MODE/colors" "$TARGET.tmp" 2>>"$LOG" && mv "$TARGET.tmp" "$TARGET" || { log "ERROR: could not write $TARGET"; exit 1; }
 log "Switched to $MODE (sunrise $(date -r $RISE '+%H:%M'), sunset $(date -r $SET '+%H:%M'))"
 
-if [ "$RESTART_ROON" = "1" ] && pgrep -xq Roon; then
+if [ "$RESTART_ROON" != "0" ] && pgrep -xq Roon; then
   # Roon reports "User cancelled" to this request but does quit, so errors are ignored.
   osascript -e 'tell application "Roon" to quit' >/dev/null 2>&1
   for i in $(seq 1 20); do pgrep -xq Roon || break; sleep 1; done

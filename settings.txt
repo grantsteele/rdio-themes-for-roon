@@ -1,0 +1,48 @@
+# =============================================================================
+#  Rdio theme switcher settings
+#  Fill in your location below, save this file, then run the installer.
+#  Used by both the Mac and the Windows installer.
+# =============================================================================
+
+# ---- 1. YOUR LOCATION (required) -------------------------------------------
+# Used to work out your local sunrise and sunset times each day.
+# You do NOT need to enter a time zone: your computer's clock takes care of that.
+#
+# How to find your numbers: open Google Maps, right-click your town, and click
+# the two numbers at the top of the menu to copy them. The first number is your
+# latitude and the second is your longitude.
+#
+#   - Use a dot for decimals (51.51), not a comma (51,51).
+#   - South of the equator = negative latitude     (Sydney: -33.87)
+#   - West of London       = negative longitude    (New York: -74.01)
+#
+# Examples:
+#   Brisbane      LATITUDE=-27.47   LONGITUDE=153.03
+#   London        LATITUDE=51.51    LONGITUDE=-0.13
+#   New York      LATITUDE=40.71    LONGITUDE=-74.01
+#   Los Angeles   LATITUDE=34.05    LONGITUDE=-118.24
+#   Berlin        LATITUDE=52.52    LONGITUDE=13.40
+#   Tokyo         LATITUDE=35.68    LONGITUDE=139.69
+#   Sao Paulo     LATITUDE=-23.55   LONGITUDE=-46.63
+
+LATITUDE=PUT_YOUR_LATITUDE_HERE
+LONGITUDE=PUT_YOUR_LONGITUDE_HERE
+
+# ---- 2. OPTIONAL TWEAKS -----------------------------------------------------
+# Switch to the light theme this many minutes after (+) or before (-) sunrise.
+SUNRISE_OFFSET_MIN=0
+
+# Switch to the dark theme this many minutes after (+) or before (-) sunset.
+# Example: -30 goes dark half an hour before sunset.
+SUNSET_OFFSET_MIN=0
+
+# 1 = restart Roon automatically when the theme changes (Roon only loads
+#     theme colours when it starts).
+# 0 = don't restart; the new theme shows next time you open Roon.
+RESTART_ROON=1
+
+# Only needed if the installer says it can't find Roon's Themes folder.
+# Leave blank to find it automatically.
+#   Mac example:     ROON_THEMES_FOLDER=/Applications/Roon.app/Contents/Resources/Themes
+#   Windows example: ROON_THEMES_FOLDER=C:\Users\you\AppData\Local\Roon\Application\Themes
+ROON_THEMES_FOLDER=
