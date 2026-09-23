@@ -19,11 +19,12 @@ Works on **Mac** and **Windows**.
 2. [Set your location](#2-set-your-location)
 3. [Install on a Mac](#3a-install-on-a-mac)
 4. [Install on Windows](#3b-install-on-windows)
-5. [Changing settings later](#changing-settings-later)
-6. [Just want the themes, without the switcher?](#just-want-the-themes-without-the-switcher)
-7. [Troubleshooting](#troubleshooting)
-8. [Uninstalling](#uninstalling)
-9. [Questions](#questions)
+5. [After a Roon update](#after-a-roon-update)
+6. [Changing settings later](#changing-settings-later)
+7. [Just want the themes, without the switcher?](#just-want-the-themes-without-the-switcher)
+8. [Troubleshooting](#troubleshooting)
+9. [Uninstalling](#uninstalling)
+10. [Questions](#questions)
 
 ---
 
@@ -116,6 +117,28 @@ That's it. Roon restarts itself at sunrise and sunset to change the theme. It on
 
 ---
 
+## After a Roon update
+
+**Roon updates can remove the Rdio themes.** An update replaces the Roon app, so any themes added to it can disappear. When that happens, Roon goes back to its standard theme and the switcher stops working. This is expected, and nothing is lost.
+
+**You don't need to make your own backup.** When you install, the switcher saves copies of both themes, including any changes you've made, along with your settings:
+- **Mac:** `~/Library/Application Support/RdioThemeSwitch/`
+- **Windows:** `%LOCALAPPDATA%\RdioThemeSwitch\`
+
+Roon updates don't touch these copies. Running the installer again puts them back.
+
+**What to do:**
+
+- **Mac:** run the installer again, from [step 3a](#3a-install-on-a-mac).
+- **Windows:** the switcher normally puts the themes back by itself within 10 minutes. If Rdio still isn't in Roon's theme list, run the installer again, from [step 3b](#3b-install-on-windows).
+- **Then**, in Roon, go to **Settings > General > Theme** and choose **Rdio** again.
+
+**If you still have the folder you downloaded**, go straight to step 3a or 3b. Your location is already in its `settings.txt`.
+
+**If you deleted it**, start again from [step 1](#1-download) and set your location again in [step 2](#2-set-your-location). Your saved themes are restored, not the fresh copies in the download.
+
+**Using only the themes, without the switcher?** Copy them into Roon again, as in [Just want the themes](#just-want-the-themes-without-the-switcher). Keep your own copy of the `Rdio` and `Rdio Night` folders if you've changed them.
+
 ## Changing settings later
 
 1. Edit `settings.txt` in the downloaded folder, for example if you move house or want different offsets.
@@ -157,9 +180,8 @@ If the sunrise and sunset times in the log look wrong, check the minus signs on 
   powershell -ExecutionPolicy Bypass -File "%LOCALAPPDATA%\RdioThemeSwitch\rdio-theme-switch.ps1" day
   ```
 
-**The Rdio themes disappeared after a Roon update.**
-- **Mac:** run the installer again. It puts your themes back.
-- **Windows:** the switcher usually puts them back by itself within 10 minutes. If it doesn't, run the installer again. You may need to choose **Rdio** again in Roon's settings.
+**The Rdio themes disappeared, or Roon went back to its standard theme.**
+A Roon update probably removed them. See [After a Roon update](#after-a-roon-update).
 
 **The log says "SKIPPED: Rdio/colors has been edited".**
 You edited the Rdio theme file directly. The switcher won't overwrite your edits. Run the installer again to save your edited version as the new day theme. It picks up edits to **Rdio Night** the same way.
