@@ -202,7 +202,11 @@ To remove the themes as well, delete the `Rdio` and `Rdio Night` folders from Ro
 
 **Why does it restart Roon?** Roon only reads theme colours when it starts. The restart takes a few seconds, happens twice a day, and only when Roon is open.
 
-**How accurate are the times?** Within a minute or two of the real sunrise and sunset. The switcher checks every 10 minutes, so the change happens within 10 minutes of that time, and within 10 minutes of your computer waking from sleep.
+**How accurate are the times?** Within a minute or two of the real sunrise and sunset. The switcher checks every 10 minutes, so the change happens within 10 minutes of that time.
+
+**What if my computer is off or asleep at sunset or sunrise?** Nothing goes wrong. The switcher doesn't need to catch the exact moment. Each time it checks, it works out whether it's currently day or night and sets the theme to match. So it catches up soon after your computer is back:
+- **After sleep:** within about 10 minutes of waking. If Roon is open, it restarts once to show the right theme.
+- **After being switched off:** on a Mac, this happens as soon as you log in, usually before you've opened Roon. On Windows, it happens within about 10 minutes of logging in. If Roon was already open with the wrong theme, it restarts once to switch.
 
 **What about the Arctic or Antarctic?** During midnight sun the theme stays light all day. During polar night it stays dark.
 
