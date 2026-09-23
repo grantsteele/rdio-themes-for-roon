@@ -34,7 +34,11 @@ Works on **Mac** and **Windows**.
    - **Mac:** double-click it.
    - **Windows:** right-click it, choose **Extract All...**, then **Extract**. Don't run anything from inside the ZIP without extracting it first.
 
-You now have a folder called `rdio-themes-for-roon-main`. Everything below happens inside that folder.
+You now have a folder called `rdio-themes-for-roon-main`.
+
+3. **Move that folder somewhere permanent**, such as your **Documents** folder, where it won't get cleaned out with your Downloads. Keep it after installing. You'll need it, with your `settings.txt`, to run the installer again after a Roon update or when you change a setting.
+
+Everything below happens inside that folder.
 
 ## 2. Set your location
 
