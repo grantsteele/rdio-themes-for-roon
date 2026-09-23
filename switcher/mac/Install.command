@@ -60,7 +60,12 @@ fi
 
 # Switcher currently showing night? Put the saved day colours back first.
 if [ -f "$BASE/day/colors" ] && [ -f "$BASE/night/colors" ] && cmp -s "$THEMES/Rdio/colors" "$BASE/night/colors"; then
-  cp "$BASE/day/colors" "$THEMES/Rdio/colors.tmp" && mv "$THEMES/Rdio/colors.tmp" "$THEMES/Rdio/colors" && echo "Put saved day colours back into Rdio before updating."
+  if [ -L "$THEMES/Rdio/colors" ] && [ "$(readlink "$THEMES/Rdio/colors")" = "$BASE/active/colors" ]; then
+    DEST="$BASE/active/colors"   # linked: change the file in your Library, not inside Roon
+  else
+    DEST="$THEMES/Rdio/colors"
+  fi
+  cp "$BASE/day/colors" "$DEST.tmp" && mv "$DEST.tmp" "$DEST" && echo "Put saved day colours back into Rdio before updating."
 fi
 
 # Refuse to start if Rdio currently holds the night colours (we'd save the wrong 'day')
@@ -80,7 +85,11 @@ echo "Backed up both themes to: $BASE/backups/$STAMP"
 # ---- 5. Link Rdio's colors file to a file in your Library (the only file the schedule changes)
 mkdir -p "$BASE/active"
 cp "$BASE/day/colors" "$BASE/active/colors"
-if ln -sf "$BASE/active/colors" "$THEMES/Rdio/colors"; then
+# (Already linked from an earlier install? Leave it, so re-running needs no extra macOS permission.)
+if [ -L "$THEMES/Rdio/colors" ] && [ "$(readlink "$THEMES/Rdio/colors")" = "$BASE/active/colors" ]; then
+  echo "Rdio theme already linked to $BASE/active/colors"
+# Make the link under a temporary name first, so a refused write never removes the existing file.
+elif ln -sf "$BASE/active/colors" "$THEMES/Rdio/colors.link" && mv -f "$THEMES/Rdio/colors.link" "$THEMES/Rdio/colors"; then
   echo "Linked Rdio theme to $BASE/active/colors"
 else
   echo "Couldn't create the link inside Roon. Allow Terminal under"
