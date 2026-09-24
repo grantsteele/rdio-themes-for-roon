@@ -5,48 +5,48 @@
 atom-background                   #FFFFFF
 atom-background-fade              #FFFFFF
 atom-black-fade                   #FFFFFF
-atom-separator-light              #E6E6E6
-atom-separator-heavy              #CFCFCF
-atom-classical-background         #F4F5F6
+atom-separator-light              #E5E8EA
+atom-separator-heavy              #CDD3D7
+atom-classical-background         #F2F3F6
 
-atom-grey4                        #2C2E2F
-atom-grey4-hover                  #000000
-atom-grey4-insensitive            #25%2C2E2F
-atom-grey4-marked                 #60%2C2E2F
-atom-grey4-secondary              #7A7C7D
+atom-grey4                        #56666F
+atom-grey4-hover                  #3A474F
+atom-grey4-insensitive            #25%56666F
+atom-grey4-marked                 #60%56666F
+atom-grey4-secondary              #9CA6AC
 
-atom-grey3                        #2C2E2F
-atom-grey3-hover                  #60%2C2E2F
-atom-grey3-insensitive            #25%2C2E2F
-atom-grey3-marked                 #6E7072
+atom-grey3                        #56666F
+atom-grey3-hover                  #60%56666F
+atom-grey3-insensitive            #25%56666F
+atom-grey3-marked                 #8B949A
 
-atom-grey2                        #EAECED
-atom-grey2-hover                  #DFE1E3
-atom-grey2-pressed                #D5D8DA
-atom-grey2-insensitive            #50%EAECED
+atom-grey2                        #EBEFF1
+atom-grey2-hover                  #E2E7EA
+atom-grey2-pressed                #D9DFE3
+atom-grey2-insensitive            #50%EBEFF1
 
-atom-grey1                        #F4F5F6
-atom-grey1-hover                  #EAECED
-atom-grey1-insensitive            #ACAEB0
-atom-grey1-marked                 #85%F4F5F6
+atom-grey1                        #F2F3F6
+atom-grey1-hover                  #EBEFF1
+atom-grey1-insensitive            #B4BCC1
+atom-grey1-marked                 #85%F2F3F6
 
-atom-grey                         #E3E5E7
-atom-grey-mapping                 #8E9091
+atom-grey                         #E5E8EA
+atom-grey-mapping                 #9CA6AC
 
 atom-genre-mapping                #7F93A8
 
-atom-blue                         #0990D5
-atom-blue-hover                   #0A7FBB
-atom-blue-pressed                 #0870A6
-atom-blue-insensitive             #40%0990D5
-atom-blue-background-blur         #B9E0F5
+atom-blue                         #008CD6
+atom-blue-hover                   #0578BD
+atom-blue-pressed                 #0566A4
+atom-blue-insensitive             #40%008CD6
+atom-blue-background-blur         #B3DDF4
 
-atom-blue-mapping                 #1F7FB5
-atom-onebox-blue                  #1F7FB5
+atom-blue-mapping                 #0578BD
+atom-onebox-blue                  #0578BD
 
-atom-daily-picks-header           #0877B3
-atom-daily-picks-frame            #1AA0E6
-atom-daily-picks-gradient         #0B89CC
+atom-daily-picks-header           #0566A4
+atom-daily-picks-frame            #00A7FF
+atom-daily-picks-gradient         #0080C4
 
 atom-orange                       #E2703A
 atom-orange-hover                 #CC5E2A
@@ -62,38 +62,38 @@ atom-red-hover                    #CC2224
 atom-red-insensitive              #F4B3B4
 atom-red-background-blur          #F7C3C4
 
-atom-selectable-blue              #E1F1FA
-atom-selectable-blue-hover        #D2EAF7
-atom-selectable-blue-checked      #E3E5E7
+atom-selectable-blue              #E0F1FB
+atom-selectable-blue-hover        #CFE8F7
+atom-selectable-blue-checked      #E5E8EA
 
-atom-selectable                   #F2F3F4
-atom-selectable-hover             #EAECED
-atom-selectable-checked           #E3E5E7
-atom-selectable-insensitive       #F7F8F8
+atom-selectable                   #F3F4F6
+atom-selectable-hover             #EBEFF1
+atom-selectable-checked           #E5E8EA
+atom-selectable-insensitive       #F7F8F9
 
 atom-bluebg-noalpha               #FFFFFF
 atom-bluebg-noalpha-classical     #FFFFFF
 atom-bluebg                       #FFFFFF
-atom-bluebg-hover                 #F2F3F4
-atom-bluebg-pressed               #EAECED
+atom-bluebg-hover                 #F3F4F6
+atom-bluebg-pressed               #EBEFF1
 atom-bluebg-insensitive           #FFFFFF
 
-atom-footer                       #EAECED
-atom-footer-opaque                #00%EAECED
-atom-classical-footer             #E3E5E7
+atom-footer                       #F7F8FA
+atom-footer-opaque                #00%F7F8FA
+atom-classical-footer             #F2F3F6
 atom-zebra-stripe                 #F7F8F9
 atom-panel                        #FFFFFF
-atom-classical-panel              #F4F5F6
+atom-classical-panel              #F2F3F6
 atom-popup                        #FFFFFF
-atom-tooltip-bg                   #F4F5F6
-atom-border                       #D8DADC
+atom-tooltip-bg                   #F2F3F6
+atom-border                       #E5E8EA
 
-atom-graph-1                      #0990D5
-atom-graph-2                      #4DB3E6
-atom-graph-3                      #BFE3F6
-atom-graph-4                      #7FC8EE
-atom-graph-5                      #2A6F96
-atom-graph-6                      #BFC1C3
+atom-graph-1                      #008CD6
+atom-graph-2                      #33A3DE
+atom-graph-3                      #BFE2F5
+atom-graph-4                      #7FC5EA
+atom-graph-5                      #0566A4
+atom-graph-6                      #C4CBCF
 
 atom-purple-mapping               #5E8FC4
 
@@ -120,9 +120,9 @@ atom-yellow                       #E6BB72
 // used by dynamiclist scrollbar in 3/2020, before changes in master. Question for brian2: are these colors correct for the new dynamiclist?
 // ===================================================
 
-atom-purple                       #0990D5
-atom-purple-hover                 #34A6E0
-atom-purple-pressed               #0A7FBB
+atom-purple                       #008CD6
+atom-purple-hover                 #1A9BDB
+atom-purple-pressed               #0578BD
 
 // ===================================================
 // brand colors

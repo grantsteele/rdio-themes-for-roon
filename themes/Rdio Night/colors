@@ -2,51 +2,51 @@
 // Theme Colors
 // ===================================================
 
-atom-background                   #16232C
-atom-background-fade              #16232C
-atom-black-fade                   #16232C
-atom-separator-light              #2E4250
-atom-separator-heavy              #6F8491
-atom-classical-background         #1B2B36
+atom-background                   #00273D
+atom-background-fade              #00273D
+atom-black-fade                   #00273D
+atom-separator-light              #0E4461
+atom-separator-heavy              #4F7A93
+atom-classical-background         #002E47
 
-atom-grey4                        #E6EAEC
+atom-grey4                        #E8EEF2
 atom-grey4-hover                  #FFFFFF
-atom-grey4-insensitive            #15%E6EAEC
-atom-grey4-marked                 #60%E6EAEC
-atom-grey4-secondary              #8FA3B0
+atom-grey4-insensitive            #15%E8EEF2
+atom-grey4-marked                 #60%E8EEF2
+atom-grey4-secondary              #8FB1C5
 
-atom-grey3                        #E6EAEC
-atom-grey3-hover                  #55%C3CDD3
-atom-grey3-insensitive            #25%C3CDD3
-atom-grey3-marked                 #C3CDD3
+atom-grey3                        #E8EEF2
+atom-grey3-hover                  #55%C5D5DF
+atom-grey3-insensitive            #25%C5D5DF
+atom-grey3-marked                 #C5D5DF
 
-atom-grey2                        #2A3F4D
-atom-grey2-hover                  #34495A
-atom-grey2-pressed                #34495A
-atom-grey2-insensitive            #50%2A3F4D
+atom-grey2                        #003957
+atom-grey2-hover                  #00486C
+atom-grey2-pressed                #00486C
+atom-grey2-insensitive            #50%003957
 
-atom-grey1                        #1A2833
-atom-grey1-hover                  #22333F
-atom-grey1-insensitive            #7F929E
-atom-grey1-marked                 #85%1A2833
+atom-grey1                        #002F4A
+atom-grey1-hover                  #003957
+atom-grey1-insensitive            #7FA0B3
+atom-grey1-marked                 #85%002F4A
 
-atom-grey                         #2A3F4D
-atom-grey-mapping                 #9AAAB4
+atom-grey                         #003957
+atom-grey-mapping                 #9AB5C5
 
-atom-genre-mapping                #8FA8C2
+atom-genre-mapping                #8FB3CF
 
-atom-blue                         #1A9BDB
-atom-blue-hover                   #38ABE4
-atom-blue-pressed                 #1588C2
-atom-blue-insensitive             #40%1A9BDB
+atom-blue                         #00A7FF
+atom-blue-hover                   #33B9FF
+atom-blue-pressed                 #0090DB
+atom-blue-insensitive             #40%00A7FF
 atom-blue-background-blur         #A9D9F2
 
-atom-blue-mapping                 #2F7FAE
-atom-onebox-blue                  #2F7FAE
+atom-blue-mapping                 #2F8FC8
+atom-onebox-blue                  #2F8FC8
 
-atom-daily-picks-header           #0B6A9E
-atom-daily-picks-frame            #1A9BDB
-atom-daily-picks-gradient         #0E7FBA
+atom-daily-picks-header           #0570AE
+atom-daily-picks-frame            #00A7FF
+atom-daily-picks-gradient         #0580C4
 
 atom-orange                       #E0764A
 atom-orange-hover                 #CB6337
@@ -62,38 +62,38 @@ atom-red-hover                    #D23639
 atom-red-insensitive              #6A2124
 atom-red-background-blur          #F3A9AB
 
-atom-selectable-blue              #17415C
-atom-selectable-blue-hover        #15384F
-atom-selectable-blue-checked      #2E4250
+atom-selectable-blue              #0B4A70
+atom-selectable-blue-hover        #0A4263
+atom-selectable-blue-checked      #0E4461
 
-atom-selectable                   #243745
-atom-selectable-hover             #2A3F4D
-atom-selectable-checked           #1A2833
-atom-selectable-insensitive       #1A2833
+atom-selectable                   #00334F
+atom-selectable-hover             #003957
+atom-selectable-checked           #002F4A
+atom-selectable-insensitive       #002F4A
 
-atom-bluebg-noalpha               #1B2B36
-atom-bluebg-noalpha-classical     #1B2B36
-atom-bluebg                       #1B2B36
-atom-bluebg-hover                 #213340
-atom-bluebg-pressed               #213340
-atom-bluebg-insensitive           #1B2B36
+atom-bluebg-noalpha               #002E47
+atom-bluebg-noalpha-classical     #002E47
+atom-bluebg                       #002E47
+atom-bluebg-hover                 #00385A
+atom-bluebg-pressed               #00385A
+atom-bluebg-insensitive           #002E47
 
-atom-footer                       #1F3B4B
-atom-footer-opaque                #00%1F3B4B
-atom-classical-footer             #234354
-atom-zebra-stripe                 #1A2A34
-atom-panel                        #1B2B36
-atom-classical-panel              #213340
-atom-popup                        #1E303C
-atom-tooltip-bg                   #243745
-atom-border                       #2E4250
+atom-footer                       #001C2D
+atom-footer-opaque                #00%001C2D
+atom-classical-footer             #00253A
+atom-zebra-stripe                 #002A42
+atom-panel                        #002E47
+atom-classical-panel              #00385A
+atom-popup                        #00304B
+atom-tooltip-bg                   #003957
+atom-border                       #0E4461
 
-atom-graph-1                      #1A9BDB
-atom-graph-2                      #5DB8E8
-atom-graph-3                      #C4E5F6
-atom-graph-4                      #8CCBEE
-atom-graph-5                      #2F7FAE
-atom-graph-6                      #566A77
+atom-graph-1                      #00A7FF
+atom-graph-2                      #4DC0FF
+atom-graph-3                      #BFE6FA
+atom-graph-4                      #80CFF7
+atom-graph-5                      #2F8FC8
+atom-graph-6                      #3F6A82
 
 atom-purple-mapping               #6FA0D0
 
@@ -120,9 +120,9 @@ atom-yellow                       #E6BB72
 // used by dynamiclist scrollbar in 3/2020, before changes in master. Question for brian2: are these colors correct for the new dynamiclist?
 // ===================================================
 
-atom-purple                       #1A9BDB
-atom-purple-hover                 #38ABE4
-atom-purple-pressed               #1588C2
+atom-purple                       #00A7FF
+atom-purple-hover                 #33B9FF
+atom-purple-pressed               #0090DB
 
 // ===================================================
 // brand colors
@@ -136,4 +136,4 @@ twitter-color                       #1DA1F2
 // ===================================================
 feedbackpanel                       #70%000000
 dimlayer                            #70%000000
-album-dimlayer                      #70%16232C
+album-dimlayer                    #70%00273D
