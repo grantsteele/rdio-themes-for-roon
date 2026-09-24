@@ -22,9 +22,10 @@ Works on **Mac** and **Windows**.
 5. [After a Roon update](#after-a-roon-update)
 6. [Changing settings later](#changing-settings-later)
 7. [Just want the themes, without the switcher?](#just-want-the-themes-without-the-switcher)
-8. [Troubleshooting](#troubleshooting)
-9. [Uninstalling](#uninstalling)
-10. [Questions](#questions)
+8. [Using CosmicRoon Theme Studio](#using-cosmicroon-theme-studio)
+9. [Troubleshooting](#troubleshooting)
+10. [Uninstalling](#uninstalling)
+11. [Questions](#questions)
 
 ---
 
@@ -154,6 +155,17 @@ Copy the two folders inside `themes` (`Rdio` and `Rdio Night`) into Roon's **The
 - **Windows:** press `Windows + R`, paste `%LOCALAPPDATA%\Roon\Application`, and press Return. Search that folder for a folder named **Themes**. It already contains Roon's built-in themes, such as `Dark`.
 
 **Don't copy the `switcher` folder into Roon's Themes folder.** Roon won't start with it there.
+
+## Using CosmicRoon Theme Studio
+
+[CosmicRoon Theme Studio](https://cosmicroonstudio.netlify.app) is a website for previewing and tweaking Roon themes. [`rdio-cosmicroon-presets.txt`](rdio-cosmicroon-presets.txt) loads both themes into it, **Rdio** and **Rdio Night**, with exactly the same colours:
+
+1. Open [`rdio-cosmicroon-presets.txt`](rdio-cosmicroon-presets.txt), then copy all of it. It's one long line starting with `RTS1:`.
+2. Open the [studio](https://cosmicroonstudio.netlify.app). In the left-hand panel, click **Presets backup**.
+3. Paste into the **lower** box, the one showing `RTS1:...`, and click **Restore presets**.
+4. **Rdio** and **Rdio Night** appear under "Start from a preset". Click either one to load it.
+
+The studio's **Share** link only keeps a theme's main colours, so use this file instead to get the exact themes.
 
 ## Troubleshooting
 
