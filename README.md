@@ -4,8 +4,8 @@ Two themes for the [Roon](https://roon.app) music player, inspired by the much-m
 
 | Theme | Look |
 |---|---|
-| **Rdio** | Light: white background, charcoal text, Rdio blue accents (`#0990D5`), red hearts |
-| **Rdio Night** | Dark: deep slate-blue background, Rdio's slate player bar, off-white text |
+| **Rdio** | Light: white background, soft slate text, Rdio blue accents (`#008CD6`), red hearts |
+| **Rdio Night** | Dark: Rdio's deep navy background, brighter blue accents, off-white text |
 
 Works on **Mac** and **Windows**.
 
