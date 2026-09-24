@@ -219,3 +219,7 @@ To remove the themes as well, delete the `Rdio` and `Rdio Night` folders from Ro
 | Schedule | A LaunchAgent: `~/Library/LaunchAgents/local.rdio-theme-switch.plist` | A Task Scheduler task: "Rdio theme switch for Roon" |
 
 On a Mac, Rdio's `colors` file becomes a link to a file in your Library. This means the scheduled job never writes inside the Roon app and needs no extra macOS permissions.
+
+## Licence
+
+MIT. See [LICENSE](LICENSE). Rdio was a trademark of Rdio, Inc. These are unofficial, fan-made themes and aren't affiliated with Rdio, Pandora or Roon Labs.
